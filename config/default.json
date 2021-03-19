@@ -1,7 +1,7 @@
 {
   "jwtPrivateKey": "unsecureKey",
   "mailServcie" : "gmail",
-  "db": "mongodb://SreeAnanthaKannan:qwe$7500@ds163354.mlab.com:63354/testt",
+  "db": "mongodb+srv://chettinad:chettinad@cluster0.jssug.mongodb.net/chettinad?retryWrites=true&w=majority",
   "dbName":"testt",
   "port": "4000",
   "requiresAuth": true,
@@ -11,5 +11,4 @@
   "ProductionEnv" : false,
   "GrammarBotUrl": "localhost"
 }
-
 

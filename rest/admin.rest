@@ -1,6 +1,6 @@
-# @URL = http://localhost:4000
+@URL = http://localhost:4000
 
-@URL = https://gentle-retreat-23209.herokuapp.com
+# @URL = https://gentle-retreat-23209.herokuapp.com
 @TYPE = /api/admin
 
 ###
