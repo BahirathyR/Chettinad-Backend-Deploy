@@ -1,0 +1,30 @@
+@URL = http://localhost:4000
+
+# @URL = https://gentle-retreat-23209.herokuapp.com
+@TYPE = /api/general
+
+###
+POST  {{URL}}{{TYPE}}/addProduct
+Content-Type: application/json
+
+{
+        "name":"Cooking Cream1"
+}
+
+###
+GET  {{URL}}{{TYPE}}/getProduct
+Content-Type: application/json
+
+###
+POST  {{URL}}{{TYPE}}/addCategory
+Content-Type: application/json
+
+{
+        "name":"Cleaning"
+}
+
+###
+GET  {{URL}}{{TYPE}}/getCategory
+Content-Type: application/json
+
+###
