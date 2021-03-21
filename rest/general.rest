@@ -8,7 +8,12 @@ POST  {{URL}}{{TYPE}}/addProduct
 Content-Type: application/json
 
 {
-        "name":"Cooking Cream1"
+        "name":"Cooking Cream1",
+        "status": true,
+        "_categoryId": "6057145f55b5e172dc1a5035",
+        "_vendorId":"6057145f55b5e172dc1a5035",
+        "description":"some description is here",
+        "sku":"eesdfsdf"
 }
 
 ###
@@ -20,11 +25,15 @@ POST  {{URL}}{{TYPE}}/addCategory
 Content-Type: application/json
 
 {
-        "name":"Cleaning"
+        "name":"Cleaning3"
 }
 
 ###
 GET  {{URL}}{{TYPE}}/getCategory
 Content-Type: application/json
 
+###
+
+DELETE {{URL}}{{TYPE}}/deleteCategoryId?_id=5e55225650b379682c1cd8e9
+Content-Type: application/json
 ###

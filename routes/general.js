@@ -6,19 +6,29 @@ const generalController = require('../controllers/general');
 // add product
 router.post('/addProduct', generalController.addProduct);
 
-// remove product
-router.post('/deleteProductById/:_id', generalController.deleteProductById);
+// remove product using ID
+router.delete('/deleteProductById/:_id', generalController.deleteProductById);
 
-// get all
+// get all Product
 router.get('/getProduct', generalController.getProduct);
 
-// add product
+// add category
 router.post('/addCategory', generalController.addCategory);
 
-// remove product
-router.post('/deleteCategoryId/:_id', generalController.deleteCategoryId);
+// remove category by id
+router.delete('/deleteCategoryId', generalController.deleteCategoryId);
 
-// get all
+// get all category
 router.get('/getCategory', generalController.getCategory);
+
+// add agent
+router.post('/addVendor', generalController.addVendor);
+
+// remove agent
+router.delete('/deleteVendorById', generalController.deleteVendorById);
+
+// get all agent list
+router.get('/getVendor', generalController.getVendor);
+
 
 module.exports = router;
