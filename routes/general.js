@@ -30,5 +30,13 @@ router.delete('/deleteVendorById', generalController.deleteVendorById);
 // get all agent list
 router.get('/getVendor', generalController.getVendor);
 
+// add Stock values
+router.post('/addStock', generalController.addStock);
+
+// get stock details by ID
+router.get('/getStockDetailsById', generalController.getStockDetailsById);
+
+// delete stock details by ID
+router.delete('/deleteStockById', generalController.deleteStockById);
 
 module.exports = router;

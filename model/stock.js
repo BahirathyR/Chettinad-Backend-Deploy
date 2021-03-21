@@ -1,15 +1,16 @@
 const { ObjectId } = require("bson");
 const mongoose = require("mongoose");
 
-const categorySchema = new mongoose.Schema({ 
-openStock : {
+const stockSchema = new mongoose.Schema({ 
+openStock : { // current added stock
     type: Number
   },
-  usedStock:{
+  usedStock:{ // how much they are used
     type: Number
   },
-  currentStock: {
-    type: Number
+  currentStock: { // current stock
+    type: Number,
+    required: true
   },
   _productId:{
     type: ObjectId,
@@ -17,5 +18,5 @@ openStock : {
   }
 });
 
-const Stock = mongoose.model("Stock", categorySchema);
+const Stock = mongoose.model("Stock", stockSchema);
 exports.Stock = Stock;

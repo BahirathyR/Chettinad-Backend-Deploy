@@ -8,16 +8,20 @@ POST  {{URL}}{{TYPE}}/addProduct
 Content-Type: application/json
 
 {
-        "name":"Cooking Cream1",
+        "name":"Cooking Cream2",
         "status": true,
-        "_categoryId": "6057145f55b5e172dc1a5035",
-        "_vendorId":"6057145f55b5e172dc1a5035",
-        "description":"some description is here",
+        "category": "vendorB",
+        "vendor":"vendorA",
+        "description":"some description for cooking cream",
         "sku":"eesdfsdf"
 }
 
 ###
 GET  {{URL}}{{TYPE}}/getProduct
+Content-Type: application/json
+
+###
+GET  {{URL}}{{TYPE}}/getProductName
 Content-Type: application/json
 
 ###
@@ -37,3 +41,20 @@ Content-Type: application/json
 DELETE {{URL}}{{TYPE}}/deleteCategoryId?_id=5e55225650b379682c1cd8e9
 Content-Type: application/json
 ###
+POST  {{URL}}{{TYPE}}/addStock
+Content-Type: application/json
+
+{
+        "openStock":null,
+        "usedStock": 1,
+        "currentStock": 6 ,
+        "_productId": "60573b82145615393614d1d0"
+}
+
+###
+GET  {{URL}}{{TYPE}}/getStockDetailsById?_id=60573b82145615393614d1d0
+Content-Type: application/json
+
+###
+DELETE {{URL}}{{TYPE}}/deleteStockById?_id=5e55225650b379682c1cd8e9
+Content-Type: application/json

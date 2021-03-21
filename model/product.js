@@ -12,18 +12,21 @@ const productSchema = new mongoose.Schema({
     type: Boolean,
     required: true
   },
-  _categoryId:{
-    type: ObjectID,
+  category: {
+    type: String
+  },
+  vendor: {
+    type: String
+  },
+  description: {
+    type: String,
     required: true
   },
-  _vendorId:{
-    type: ObjectID
+  sku: {
+    type: String,
+    required: true
   },
-  description:{
-     type: String,
-     required: true
-  },
-  sku:{
+  reserved:{
     type: String,
     required: true
   }

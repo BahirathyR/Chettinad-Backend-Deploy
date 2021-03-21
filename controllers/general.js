@@ -1,6 +1,7 @@
 const { Product } = require("../model/product");
 const { Category } = require("../model/category");
 const { Vendor } = require("../model/vendor");
+const { Stock } = require("../model/stock");
 
 exports.addProduct = async(req, res) => {
     const body = req.body;
@@ -23,7 +24,7 @@ exports.deleteProductById = async(req, res) => {
 }
 
 exports.getProduct = async(req, res) => {
-    const data = await Product.find({}, {name:1, _id:1});
+    const data = await Product.find({}).sort({name: -1});
     return res.status(200).json({
         status: 200,
         message: "Data successfully fetched",
@@ -99,4 +100,45 @@ exports.getVendor = async(req, res) => {
         message: "Data successfully fetched",
         data
     });
+}
+
+exports.addStock = async(req, res) => {
+    console.log('init addStock');
+    const body = req.body;
+    const admin = new Stock(body);
+    await admin.save();
+    return res.status(200).json({
+        status: 200,
+        message: "Stock successfully added.."
+    });
+}
+
+exports.getStockDetailsById = async(req, res) => {
+    const {_id} = req.query;
+    console.log('_id', _id);
+    const data = await Stock.find({_productId: _id}).sort({_id: -1});
+    return res.status(200).json({
+        status: 200,
+        message: "Data successfully fetched",
+        data
+    });
+}
+
+exports.deleteStockById = async(req, res) => {
+    const {_id} = req.query;
+    const data = await Stock.deleteOne({ _id });
+    if(data.deletedCount < 1){
+        return res.status(404).json({
+            status: 404,
+            message: "Failed to delete the data",
+            deletedCount: data.deletedCount
+        });
+    }
+    else{
+    return res.status(200).json({
+        status: 200,
+        message: "Successfully Deleted",
+        deletedCount: data.deletedCount
+    });
+}
 }
