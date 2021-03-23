@@ -15,6 +15,10 @@ openStock : { // current added stock
   _productId:{
     type: ObjectId,
     required: true
+  },
+  date:{
+    type: String,
+    default: Date 
   }
 });
 

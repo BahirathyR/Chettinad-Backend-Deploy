@@ -34,7 +34,7 @@ router.get('/getVendor', generalController.getVendor);
 router.post('/addStock', generalController.addStock);
 
 // get stock details by ID
-router.get('/getStockDetailsById', generalController.getStockDetailsById);
+router.get('/getStockDetailsByProductId', generalController.getStockDetailsByProductId);
 
 // delete stock details by ID
 router.delete('/deleteStockById', generalController.deleteStockById);

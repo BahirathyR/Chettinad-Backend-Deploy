@@ -8,12 +8,13 @@ POST  {{URL}}{{TYPE}}/addProduct
 Content-Type: application/json
 
 {
-        "name":"Cooking Cream2",
+        "name":"Onion",
         "status": true,
-        "category": "vendorB",
-        "vendor":"vendorA",
+        "category": "category-a",
+        "vendor":"vendor-a",
         "description":"some description for cooking cream",
-        "sku":"eesdfsdf"
+        "sku":"SKU",
+        "reserved": 2
 }
 
 ###
@@ -45,16 +46,18 @@ POST  {{URL}}{{TYPE}}/addStock
 Content-Type: application/json
 
 {
-        "openStock":null,
-        "usedStock": 1,
-        "currentStock": 6 ,
-        "_productId": "60573b82145615393614d1d0"
+        "openStock":20,
+        "usedStock": null,
+        "currentStock": 20,
+        "_productId": "6059fcd433165c6b341e6bf1"
 }
 
 ###
-GET  {{URL}}{{TYPE}}/getStockDetailsById?_id=60573b82145615393614d1d0
+GET  {{URL}}{{TYPE}}/getStockDetailsByProductId?_id=605a28e4d71743484010f736
 Content-Type: application/json
 
 ###
-DELETE {{URL}}{{TYPE}}/deleteStockById?_id=5e55225650b379682c1cd8e9
+DELETE {{URL}}{{TYPE}}/deleteStockById?_id=605a3184d71743484010f73b
 Content-Type: application/json
+
+###

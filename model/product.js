@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
+    unique: true,
     required: true,
     minlength: 0,
     maxlength: 50
@@ -27,8 +28,11 @@ const productSchema = new mongoose.Schema({
     required: true
   },
   reserved:{
-    type: String,
+    type: Number,
     required: true
+  },
+  currentStock:{
+    type: Number
   }
 
 });
