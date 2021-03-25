@@ -20,3 +20,4 @@ const port = process.env.PORT || config.get("port");
 app.listen(port, () => {
     console.log(`Listening on port ${port}...`);
     console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+});
