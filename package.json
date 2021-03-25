@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+    "scripts": {
     "start": "node app.js",
     "dev": "export NODE_ENV=default && nodemon app.js",
     "prod": "export NODE_ENV=production && node app.js",
