@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
+    "build:production": "node --version",
     "dev": "export NODE_ENV=default && node app.js",
     "prod": "export NODE_ENV=production && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +25,7 @@
     "config": "^3.2.5",
     "cors": "^2.8.5",
     "date-fn": "0.0.2",
+    "debug": "^4.3.1",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "mongodb": "^3.5.3",
